@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "UUID": "com.claudegauge.usage",
+  "Name": "Claude Gauge",
+  "Version": "1.0.0",
+  "Author": "Thermo",
+  "Description": "Monitor Claude (Anthropic) usage limits on your Stream Deck keys. Displays 7-day and 5-hour usage as live progress bars, percentages, and countdown timers.",
+  "Icon": "imgs/plugin-icon",
+  "CodePath": "bin/plugin.js",
+  "Category": "Claude Gauge",
+  "CategoryIcon": "imgs/plugin-icon",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "6.9"
+  },
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Nodejs": {
+    "Version": "20",
+    "Debug": "enabled"
+  },
+  "Actions": [
+    {
+      "UUID": "com.claudegauge.usage.combined",
+      "Name": "Claude Usage (Combined)",
+      "Icon": "imgs/action-combined",
+      "Tooltip": "Shows both 7-day and 5-hour Claude usage on a single key",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/action-combined",
+          "TitleAlignment": "middle",
+          "ShowTitle": false
+        }
+      ],
+      "PropertyInspectorPath": "ui/settings.html"
+    },
+    {
+      "UUID": "com.claudegauge.usage.seven-day",
+      "Name": "Claude Usage (7-Day)",
+      "Icon": "imgs/action-7day",
+      "Tooltip": "Shows rolling 7-day Claude usage with countdown timer",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/action-7day",
+          "TitleAlignment": "middle",
+          "ShowTitle": false
+        }
+      ],
+      "PropertyInspectorPath": "ui/settings.html"
+    },
+    {
+      "UUID": "com.claudegauge.usage.five-hour",
+      "Name": "Claude Usage (5-Hour)",
+      "Icon": "imgs/action-5hour",
+      "Tooltip": "Shows current 5-hour session Claude usage with countdown timer",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/action-5hour",
+          "TitleAlignment": "middle",
+          "ShowTitle": false
+        }
+      ],
+      "PropertyInspectorPath": "ui/settings.html"
+    }
+  ]
+}

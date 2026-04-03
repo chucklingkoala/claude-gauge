@@ -1,0 +1,8 @@
+node_modules/
+com.claudegauge.usage.sdPlugin/bin/
+com.claudegauge.usage.sdPlugin/logs/
+*.streamDeckPlugin
+.claude/
+.env
+.DS_Store
+Thumbs.db
